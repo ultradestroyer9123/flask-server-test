@@ -31,6 +31,12 @@ def divide(num1, num2):
     answer = int(num1) / int(num2)
   )
 
+@app.route('/modulo/<num1>/<num2>')
+def modulo(num1, num2):
+  return jsonify(
+    answer = int(num1) % int(num2)
+  )
+
 if __name__ == "__main__":
   # app.run(host='192.168.1.79', threaded=True, debug=True)
   # app.run(host='0.0.0.0', threaded=True, debug=True)
