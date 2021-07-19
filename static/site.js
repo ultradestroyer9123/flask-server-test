@@ -22,6 +22,16 @@ function subtractNumbers () {
   });
 }
 
+function multiplyNumbers () {
+  var dog1 = numberify($("#dog1").val())
+  var dog2 = numberify($("#dog2").val())
+
+  $.get('/multiply/' + dog1 + '/' + dog2, function( response ) {
+    console.log(response) 
+    $("#answer").html('The answer is: ' + response.answer)
+  });
+}
+
 function numberify (num) {
   if(num == '') { num = 0 }
   num = parseInt(num)
